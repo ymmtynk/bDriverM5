@@ -7,6 +7,7 @@ bCoreを物理的なIFで操作するためのM5StickCを使った操作デバ�
   
 Notic!!  
 arduino-esp32/libraries/BLE has some bugs and you need to use wakwak-koba's BLE lib to works this M5Stick application. (Nov. 2019)  
+本家のBLEライブラリはバグがあってこのアプリを動かすにはwakwak-kobaさんのBugFix版のBLEライブラリが必要です。（2019年11月時点）  
 https://github.com/wakwak-koba/arduino-esp32/tree/master/libraries/BLE  
 
 # その他
