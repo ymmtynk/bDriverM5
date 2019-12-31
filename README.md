@@ -9,6 +9,6 @@ Notic!!
 arduino-esp32/libraries/BLE has some bugs and you need to use wakwak-koba's BLE lib to works this M5Stick application. (Nov. 2019)  
 https://github.com/wakwak-koba/arduino-esp32/tree/master/libraries/BLE  
 
-#その他
+# その他
 * 使用しているアナログジョイスティックは任天堂ゲームキューブのもの（押し込みスイッチがない）
 * 使用しているスライダーVRは秋月電子で売っている10kΩBカーブのもの
