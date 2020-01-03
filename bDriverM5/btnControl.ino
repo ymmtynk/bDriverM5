@@ -3,12 +3,12 @@ bool    prvSw[4];
 
 extern bool    port[4];
 
-#define   VOLUME1   0
-#define   VOLUME2   1
-#define   VOLUME3   2
-#define   VOLUME4   3
-#define   VOLUME5   4
-#define   VOLUME6   5
+#define   VOLUME1   0       // J1
+#define   VOLUME2   1       // J2
+#define   VOLUME3   2       // J3
+#define   VOLUME4   3       // J4
+#define   VOLUME5   4       // J5
+#define   VOLUME6   5       // J6
 #define   ATT_ROLL  6
 #define   ATT_PITCH 7
 #define   ATT_YAW   8
@@ -16,20 +16,22 @@ extern bool    port[4];
 
 const String   cntSourceStr[] = 
 {
-  "SLL", "SLR",                 // Slider Left / Right
-  "JLX", "JLY",                 // JoyStick Left X, Left Y
-  "JRX", "JRY",                 // JoyStick Right X, Right Y
-  "ROL", "PTC", "YAW"           // Attitude (6Axis Sensor)
+  "J1   ", "J2   ",                 // 
+  "J3   ", "J4   ",                 // 
+  "J5   ", "J6   ",                 // 
+  "Roll ", "Pitch", "Yaw  "         // Attitude (6Axis Sensor)
 };
 
 const String   cntFlipStr[] = 
 {
-  "Nor", "FLP"                  // Control Value Flip
+  "Normal",
+  "Flip  "                  // Control Value Flip
 };
 
 const String   cntToggleStr[] = 
 {
-  "Mmt", "Tgl"                  // Button push to toggle on/off or momentam on
+  "Momentary",
+  "Toggle   "         // Button push to toggle on/off or momentary on
 };
 
 struct    bCoreSetting          // 操作設定のための構造体
@@ -87,9 +89,15 @@ void    init_setting()          // 操作設定の初期化
   int i;
   
   bStg.ptr = -1;
-  
+
+  bStg.source[0] = 0;   // Mot1 : J1
+  bStg.source[1] = 5;   // Mot2 : J6
+  bStg.source[2] = 1;   // Srv1 : J2
+  bStg.source[3] = 2;   // Srv2 : J3
+  bStg.source[4] = 3;   // Srv3 : J4
+  bStg.source[5] = 4;   // Srv4 : J5
+     
   for (i=0; i<6; i++) {
-    bStg.source[i] = i;
     bStg.flip[i] = false;
   }
   bStg.toggle = false;
@@ -300,7 +308,7 @@ void    update_BTN()
     }
   }
 
-  // スイッチ3は設定モードのときに操作量のFlipオンオフに使用する  
+  // スイッチ3は設定モードのときに操作量のFlipオンオフとLEDのトグル操作切り替えに使用する  
   if ((prvSw[2] != crtSw[2]) && (crtSw[2] == false)) {
     // SW3 Released
     Serial.println("> SW3 Released.");
@@ -310,7 +318,12 @@ void    update_BTN()
       if (bStg.ptr != -1) {
         // 設定モードに入ってるとき
         if (bStg.ptr == 6) {
-          ;
+          // LEDのトグル操作の切り替え
+          if (bStg.toggle == true) {
+            bStg.toggle = false;
+          } else {
+            bStg.toggle = true;
+          }
         } else {
           if (bStg.flip[bStg.ptr] == true) {
             bStg.flip[bStg.ptr] = false;

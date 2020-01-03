@@ -88,33 +88,24 @@ byte    get_control_value(int sourceid)
 {
   byte  result;
 
-#define   VOLUME1   0
-#define   VOLUME2   1
-#define   VOLUME3   2
-#define   VOLUME4   3
-#define   VOLUME5   4
-#define   VOLUME6   5
-#define   ATT_ROLL  6
-#define   ATT_PITCH 7
-#define   ATT_YAW   8
   switch (sourceid) {
-    case 0:     // L
+    case 0:
       result = get_adc_value(0);
       break;
-    case 1:     // R
-      result = get_adc_value(7);
-      break;
-    case 2:     // JLX
+    case 1:
       result = get_adc_value(1);
       break;
-    case 3:     // JLY
+    case 2:
       result = get_adc_value(2);
       break;
-    case 4:     // JRX
+    case 3:
       result = get_adc_value(5);
       break;
-    case 5:     // JRY
+    case 4:
       result = get_adc_value(6);
+      break;
+    case 5:     
+      result = get_adc_value(7);
       break;
     case 6:     // Roll
       //result = (byte)(128.0 - rollAtt*(128.0f/180.0f));

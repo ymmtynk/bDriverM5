@@ -55,7 +55,7 @@ class bleClientCallback : public BLEClientCallbacks
     bCoreClient->disconnect();
 
     // 色々めんどくさいので一回接続切れたらリブートさせる
-    Serial.println("ESP.restart()");
+    Serial.println("ESP.restart()");    // コレをコメントアウトするとリブートしなくなる
     ESP.restart();
     
     return;

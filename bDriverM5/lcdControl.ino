@@ -104,19 +104,19 @@ void    update_LCD()
       M5.Lcd.setTextColor(WHITE, BLACK);
       M5.Lcd.printf(" Battery : %2.2f[V]  \r\n", batteryVoltage);
       if (bStg.ptr == 0) { M5.Lcd.setTextColor(BLACK, WHITE); } else { M5.Lcd.setTextColor(WHITE, BLACK); }
-      M5.Lcd.printf(" Mt1:%3d  %s %s \r\n", get_pwmValue(0)  , cntSourceStr[bStg.source[0]].c_str(), cntFlipStr[bStg.flip[0]].c_str());
+      M5.Lcd.printf(" Mot1:%3d  %s %s \r\n", get_pwmValue(0)  , cntSourceStr[bStg.source[0]].c_str(), cntFlipStr[bStg.flip[0]].c_str());
       if (bStg.ptr == 1) { M5.Lcd.setTextColor(BLACK, WHITE); } else { M5.Lcd.setTextColor(WHITE, BLACK); }
-      M5.Lcd.printf(" Mt2:%3d  %s %s \r\n", get_pwmValue(1)  , cntSourceStr[bStg.source[1]].c_str(), cntFlipStr[bStg.flip[1]].c_str());
+      M5.Lcd.printf(" Mot2:%3d  %s %s \r\n", get_pwmValue(1)  , cntSourceStr[bStg.source[1]].c_str(), cntFlipStr[bStg.flip[1]].c_str());
       if (bStg.ptr == 2) { M5.Lcd.setTextColor(BLACK, WHITE); } else { M5.Lcd.setTextColor(WHITE, BLACK); }
-      M5.Lcd.printf(" Sv1:%3d  %s %s \r\n", get_servoValue(0), cntSourceStr[bStg.source[2]].c_str(), cntFlipStr[bStg.flip[2]].c_str());
+      M5.Lcd.printf(" Srv1:%3d  %s %s \r\n", get_servoValue(0), cntSourceStr[bStg.source[2]].c_str(), cntFlipStr[bStg.flip[2]].c_str());
       if (bStg.ptr == 3) { M5.Lcd.setTextColor(BLACK, WHITE); } else { M5.Lcd.setTextColor(WHITE, BLACK); }
-      M5.Lcd.printf(" Sv2:%3d  %s %s \r\n", get_servoValue(1), cntSourceStr[bStg.source[3]].c_str(), cntFlipStr[bStg.flip[3]].c_str());
+      M5.Lcd.printf(" Srv2:%3d  %s %s \r\n", get_servoValue(1), cntSourceStr[bStg.source[3]].c_str(), cntFlipStr[bStg.flip[3]].c_str());
       if (bStg.ptr == 4) { M5.Lcd.setTextColor(BLACK, WHITE); } else { M5.Lcd.setTextColor(WHITE, BLACK); }
-      M5.Lcd.printf(" Sv3:%3d  %s %s \r\n", get_servoValue(2), cntSourceStr[bStg.source[4]].c_str(), cntFlipStr[bStg.flip[4]].c_str());
+      M5.Lcd.printf(" Srv3:%3d  %s %s \r\n", get_servoValue(2), cntSourceStr[bStg.source[4]].c_str(), cntFlipStr[bStg.flip[4]].c_str());
       if (bStg.ptr == 5) { M5.Lcd.setTextColor(BLACK, WHITE); } else { M5.Lcd.setTextColor(WHITE, BLACK); }
-      M5.Lcd.printf(" Sv4:%3d  %s %s \r\n", get_servoValue(3), cntSourceStr[bStg.source[5]].c_str(), cntFlipStr[bStg.flip[5]].c_str());
+      M5.Lcd.printf(" Srv4:%3d  %s %s \r\n", get_servoValue(3), cntSourceStr[bStg.source[5]].c_str(), cntFlipStr[bStg.flip[5]].c_str());
       if (bStg.ptr == 6) { M5.Lcd.setTextColor(BLACK, WHITE); } else { M5.Lcd.setTextColor(WHITE, BLACK); }
-      M5.Lcd.printf(" SW:%d%d%d%d  %s", crtSw[0], crtSw[1], crtSw[2], crtSw[3], cntToggleStr[bStg.toggle].c_str());
+      M5.Lcd.printf(" SW :%d%d%d%d  %s", crtSw[0], crtSw[1], crtSw[2], crtSw[3], cntToggleStr[bStg.toggle].c_str());
       break;
     case STATE_NOT_READY:
     default:
