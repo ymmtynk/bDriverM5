@@ -8,7 +8,7 @@
 *  Grip : グリップメカデータ 
 
 ## 注意！
-　本家のBLEライブラリ(arduino-esp32/libraries/BLE)はバグがあってビルドしても正常に実行できません。
+　本家のBLEライブラリ(arduino-esp32/libraries/BLE)はバグがあってビルドしても正常に実行できません。  
 　このアプリを動かすにはwakwak-kobaさんのBugFix版のBLEライブラリが必要です。（2019年11月時点）  
 　https://github.com/wakwak-koba/arduino-esp32/tree/master/libraries/BLE  
 
