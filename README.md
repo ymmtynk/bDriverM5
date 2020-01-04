@@ -11,8 +11,8 @@
 　このアプリを動かすにはwakwak-kobaさんのBugFix版のBLEライブラリが必要です。（2019年11月時点）  
 　https://github.com/wakwak-koba/arduino-esp32/tree/master/libraries/BLE  
 
-# 使用方法
- Wiki参照  
+# 使用方法、外形情報など
+ Wikiを参照  
  
 # 購入方法
  TBD
