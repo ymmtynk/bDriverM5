@@ -263,8 +263,8 @@ void    update_BTN()
           } else {
             port[0] = true;
           }
-        } else {
-          port[0] = crtSw[0];
+        //} else {
+        //  port[0] = crtSw[0];
         }
       }
     }
@@ -301,8 +301,8 @@ void    update_BTN()
           } else {
             port[1] = true;
           }
-        } else {
-          port[1] = crtSw[1];
+        //} else {
+        //  port[1] = crtSw[1];
         }
       }
     }
@@ -339,8 +339,8 @@ void    update_BTN()
           } else {
             port[2] = true;
           }
-        } else {
-          port[2] = crtSw[2];
+        //} else {
+        //  port[2] = crtSw[2];
         }
       }
     }
@@ -370,11 +370,18 @@ void    update_BTN()
           } else {
             port[3] = true;
           }
-        } else {
-          port[3] = crtSw[3];
+        //} else {
+        //  port[3] = crtSw[3];
         }
       }
     }
+  }
+
+  if (bStg.toggle != true) {
+    port[0] = crtSw[0];
+    port[1] = crtSw[1];
+    port[2] = crtSw[2];
+    port[3] = crtSw[3];
   }
   
   prvSw[0] = crtSw[0];
