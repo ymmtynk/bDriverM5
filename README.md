@@ -16,7 +16,7 @@
  
 # 購入方法  
 ｂDriverM5については個人売買で対応します。  
-Twitter　@bCoreBLEへDMにて連絡してください。  
+Twitter:[@bCoreBLE](https://twitter.com/bCoreBLE)へDMにて連絡してください。  
 　①bDriverM5 ファーム書込済M5StickC付き　黒色　　　　3,900円  
 　②bDriverM5 ファーム書込済M5StickC付き　白色　　　　3,900円  
 　③bDriverM5 M5StickCなし　黒色　　　　　　　　　 2,600円  
