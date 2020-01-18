@@ -11,16 +11,6 @@
 　このアプリを動かすにはwakwak-kobaさんのBugFix版のBLEライブラリが必要です。（2019年11月時点）  
 　https://github.com/wakwak-koba/arduino-esp32/tree/master/libraries/BLE  
 
-# 使用方法、外形情報など
- Wikiを参照  
+# 使用方法、外形情報、購入方法など
+ [Wiki](https://github.com/ymmtynk/bDriverM5/wiki)を参照  
  
-# 購入方法  
-ｂDriverM5については個人売買で対応します。  
-Twitter:[@bCoreBLE](https://twitter.com/bCoreBLE)へDMにて連絡してください。  
-　①bDriverM5 ファーム書込済M5StickC付き　黒色　　　　3,900円  
-　②bDriverM5 ファーム書込済M5StickC付き　白色　　　　3,900円  
-　③bDriverM5 M5StickCなし　黒色　　　　　　　　　 2,600円  
-　④bDriverM5 M5StickCなし　白色　　　　　　　　　 2,600円  
-送料別（基本的にクロネコ宅急便コンパクトで発送します。）  
-支払いは、銀行振込、PayPay、AliPay,WeChatPay、PayPalなど可能な範囲で対応します。  
-
