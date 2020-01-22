@@ -164,6 +164,12 @@ byte    get_pwmValue(int ch)
   if (bStg.flip[ch]) {
     result = 255 - result;
   }
+
+  // モーターコントロールは原点付近に不感帯を設けないと
+  // モーターが回らないのに無駄に電流が流れてしまう
+  if (((128-10) < result) && (result < (128+10))) {
+    result = 128;
+  }
   
   return  result;
 }
