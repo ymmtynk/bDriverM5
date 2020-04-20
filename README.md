@@ -7,9 +7,7 @@
 *  Grip : グリップメカデータ 
 
 ## 注意！
-　本家のBLEライブラリ(arduino-esp32/libraries/BLE)はバグがあってビルドしても正常に実行できません。  
-　このアプリを動かすにはwakwak-kobaさんのBugFix版のBLEライブラリが必要です。（2019年11月時点）  
-　https://github.com/wakwak-koba/arduino-esp32/tree/master/libraries/BLE  
+以前の古いIDFではBLE周りにバグがあり動作しませんでしたが、ESP32 Arduino 1.0.4 (IDF 3.2) Releaseでは問題が解消されており動作することを確認しました。
 
 # 使用方法、外形情報、購入方法など
  [Wiki](https://github.com/ymmtynk/bDriverM5/wiki)を参照  
