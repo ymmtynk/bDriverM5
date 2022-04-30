@@ -93,7 +93,7 @@ bool bCoreBLE_connect(int index)
 
   // Obtain a reference to the characteristic in the bCore service.
   bCoreCharacteristicGetBatteryVoltage = bCoreService->getCharacteristic(bCoreCharUUID_GetBatteryVoltage);
-  Serial.printf(" - bCoreCharacteristicGetBatteryVoltage: 0x%x\r\n", bCoreCharacteristicGetBatteryVoltage);
+  Serial.printf(" - bCoreCharacteristicGetBatteryVoltage: 0x%x\r\n", (unsigned int)bCoreCharacteristicGetBatteryVoltage);
   if (bCoreCharacteristicGetBatteryVoltage == NULL) {
     Serial.print(" - Failed to find GetBatteryVoltage UUID: ");
     Serial.println(bCoreCharUUID_GetBatteryVoltage.toString().c_str());
@@ -102,7 +102,7 @@ bool bCoreBLE_connect(int index)
     return false;
   }
   bCoreCharacteristicSetMotorPWM = bCoreService->getCharacteristic(bCoreCharUUID_SetMotorPWM);
-  Serial.printf(" - bCoreCharacteristicSetMotorPWM: 0x%x\r\n", bCoreCharacteristicSetMotorPWM);
+  Serial.printf(" - bCoreCharacteristicSetMotorPWM: 0x%x\r\n", (unsigned int)bCoreCharacteristicSetMotorPWM);
   if (bCoreCharacteristicSetMotorPWM == NULL) {
     Serial.print("- Failed to find SetMotorPWM UUID: ");
     Serial.println(bCoreCharUUID_SetMotorPWM.toString().c_str());
@@ -111,7 +111,7 @@ bool bCoreBLE_connect(int index)
     return false;
   }
   bCoreCharacteristicSetPortOut = bCoreService->getCharacteristic(bCoreCharUUID_SetPortOut);
-  Serial.printf(" - bCoreCharacteristicSetPortOut: 0x%x\r\n", bCoreCharacteristicSetPortOut);
+  Serial.printf(" - bCoreCharacteristicSetPortOut: 0x%x\r\n", (unsigned int)bCoreCharacteristicSetPortOut);
   if (bCoreCharacteristicSetPortOut == NULL) {
     Serial.print(" - Failed to find SetPortOut UUID: ");
     Serial.println(bCoreCharUUID_SetPortOut.toString().c_str());
@@ -120,7 +120,7 @@ bool bCoreBLE_connect(int index)
     return false;
   }
   bCoreCharacteristicSetServoPosition = bCoreService->getCharacteristic(bCoreCharUUID_SetServoPosition);
-  Serial.printf(" - bCoreCharacteristicSetServoPosition: 0x%x\r\n", bCoreCharacteristicSetServoPosition);
+  Serial.printf(" - bCoreCharacteristicSetServoPosition: 0x%x\r\n", (unsigned int)bCoreCharacteristicSetServoPosition);
   if (bCoreCharacteristicSetServoPosition == NULL) {
     Serial.print("- Failed to find SetServoPosition UUID: ");
     Serial.println(bCoreCharUUID_SetServoPosition.toString().c_str());
@@ -129,7 +129,7 @@ bool bCoreBLE_connect(int index)
     return false;
   }
   bCoreCharacteristicBurstCommand = bCoreService->getCharacteristic(bCoreCharUUID_BurstCommand);
-  Serial.printf(" - bCoreCharacteristicBurstCommand: 0x%x\r\n", bCoreCharacteristicBurstCommand);
+  Serial.printf(" - bCoreCharacteristicBurstCommand: 0x%x\r\n", (unsigned int)bCoreCharacteristicBurstCommand);
   if (bCoreCharacteristicBurstCommand == NULL) {
     Serial.print(" - Failed to find BurstCommand UUID: ");
     Serial.println(bCoreCharUUID_BurstCommand.toString().c_str());
@@ -138,7 +138,7 @@ bool bCoreBLE_connect(int index)
     return false;
   }
   bCoreCharacteristicGetFunctions = bCoreService->getCharacteristic(bCoreCharUUID_GetFunctions);
-  Serial.printf(" - bCoreCharacteristicGetFunctions: 0x%x\r\n", bCoreCharacteristicGetFunctions);
+  Serial.printf(" - bCoreCharacteristicGetFunctions: 0x%x\r\n", (unsigned int)bCoreCharacteristicGetFunctions);
   if (bCoreCharacteristicGetFunctions == NULL) {
     Serial.print(" - Failed to find GetFunctions UUID: ");
     Serial.println(bCoreCharUUID_GetFunctions.toString().c_str());
@@ -316,7 +316,3 @@ void    checkManualConnect()
   
   return;
 }
-
-
-
-

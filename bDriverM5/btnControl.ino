@@ -252,7 +252,7 @@ void    update_BTN()
       if (bStg.ptr != -1) {
         // 設定モードに入ってるとき
         bStg.ptr--;
-        if (bStg.ptr < 7) {
+        if (bStg.ptr < 0) {
           bStg.ptr = 6;
         }
       } else {
@@ -346,7 +346,7 @@ void    update_BTN()
     }
   }
   
-  // スイッチ１はメニューの下移動に使用する
+  // スイッチ４はメニューの下移動に使用する
   if ((prvSw[3] != crtSw[3]) && (crtSw[3] == false)) {
     // SW4 Released
     Serial.println("> SW4 Released.");
@@ -391,5 +391,3 @@ void    update_BTN()
   
   return;
 }
-
-
